@@ -1,0 +1,125 @@
+{
+  "conditionalFormats": { "card": [], "datasource": [] },
+  "formulas": {
+    "card": [
+      {
+        "templateId": 2633,
+        "id": "calculation_5b2ee62e-72ef-48b1-8ab0-9a9bc94f4668",
+        "name": "Distinct Viewers",
+        "formula": "count(distinct `User_ID`)",
+        "status": "VALID",
+        "persistedOnDataSource": false,
+        "dataType": "LONG",
+        "isAggregatable": false,
+        "bignumber": false
+      }
+    ],
+    "dsUpdated": [],
+    "dsDeleted": []
+  },
+  "subscriptions": {
+    "big_number": {
+      "name": "big_number",
+      "dataSourceId": "f8a99562-795f-46f4-8b2b-1e22754256e0",
+      "columns": [
+        {
+          "column": null,
+          "aggregation": null,
+          "formulaId": "calculation_5b2ee62e-72ef-48b1-8ab0-9a9bc94f4668",
+          "dataSourceId": "f8a99562-795f-46f4-8b2b-1e22754256e0",
+          "calendar": null,
+          "mapping": null,
+          "alias": "Distinct Viewers",
+          "format": { "type": "abbreviated", "format": "0" }
+        }
+      ],
+      "filters": [],
+      "dateRangeFilter": null,
+      "dateGrain": null,
+      "orderBy": [],
+      "groupBy": [],
+      "fiscal": false,
+      "projection": false,
+      "distinct": false,
+      "limit": 1,
+      "offset": null
+    },
+    "main": {
+      "name": "main",
+      "dataSourceId": "f8a99562-795f-46f4-8b2b-1e22754256e0",
+      "columns": [
+        {
+          "column": "Date",
+          "aggregation": null,
+          "formulaId": null,
+          "dataSourceId": null,
+          "calendar": true,
+          "mapping": "ITEM",
+          "alias": null,
+          "format": null
+        },
+        {
+          "column": "Object_Name",
+          "aggregation": "COUNT",
+          "formulaId": null,
+          "dataSourceId": "f8a99562-795f-46f4-8b2b-1e22754256e0",
+          "calendar": null,
+          "mapping": "VALUE",
+          "alias": null,
+          "format": null
+        }
+      ],
+      "filters": [],
+      "dateRangeFilter": {
+        "id": null,
+        "dateTimeRange": {
+          "dateTimeRangeType": "ROLLING_PERIOD",
+          "interval": "DAY",
+          "offset": 0,
+          "count": 30
+        },
+        "periods": null,
+        "column": { "exprType": "COLUMN", "column": "Event_Time" }
+      },
+      "dateGrain": { "column": "Event_Time", "dateTimeElement": "DAY" },
+      "orderBy": [],
+      "groupBy": [
+        {
+          "column": "Date",
+          "aggregation": null,
+          "formulaId": null,
+          "dataSourceId": null,
+          "calendar": true
+        }
+      ],
+      "fiscal": false,
+      "projection": false,
+      "distinct": false,
+      "limit": null,
+      "offset": null
+    }
+  },
+  "slicers": [],
+  "title": "Dashboard Engagement - Last 30 Days",
+  "description": null,
+  "chartType": "badge_spark_line",
+  "chartVersion": "9",
+  "goal": null,
+  "noSummary": false,
+  "allowTableDrill": true,
+  "locked": null,
+  "hideColumns": null,
+  "metadataOverrides": {
+    "size_single_val": "Medium",
+    "size_change_val": "Medium",
+    "symbol_on_last": "true",
+    "show_scales": "false",
+    "direction_indicator": "Triangle",
+    "line_thickness": "Thick",
+    "hide_annotations": "false",
+    "spark_line_style": "Curved"
+  },
+  "preferredFullSize": null,
+  "cardId": 1310851071,
+  "urn": "1310851071"
+}

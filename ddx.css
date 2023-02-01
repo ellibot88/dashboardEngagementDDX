@@ -1,0 +1,30 @@
+#flexbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+  margin: 20px;
+  font-size: 16px;
+  color: #4b4b4b;
+}
+.header {
+  color: #777;
+}
+.value {
+  font-size: 36px;
+  color: #333;
+}
+
+input {
+  visibility: hidden;
+  transform: scale(1.5);
+}
+
+#exclude-label {
+  visibility: hidden;
+}
+
+#welcome {
+  visibility: hidden;
+}
